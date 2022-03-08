@@ -17,6 +17,7 @@ const generateCalendar = () => {
 
     const calendarDate = document.querySelector(".dates");
     calendarDate.innerHTML = "";
+
     // previous month // add if previous month's last day is Sunday - Friday(0-5), don't add if previous month's last day is Saturday(6)
     if (prevLastDay < 6) {
         for (let i = prevLastDate - prevLastDay; i <= prevLastDate; i++) {
@@ -24,25 +25,29 @@ const generateCalendar = () => {
         };
     };
 
+    // this month
     for (let i = 1; i <= currentLastDate; i++) {
         calendarDate.innerHTML = calendarDate.innerHTML + `<div class="active">` + i + `</div>`;
     };
 
-    if (7 - currentLastDay !== 7) {
-        for (let i = 1; i <= (7 - currentLastDay - 1); i++) {
-            calendarDate.innerHTML = calendarDate.innerHTML + `<div class="inactive">` + i + `</div>`;
-        };
-    }
+    // next month // don't add if current month's last day is Saturday(6) i <= 0
+    // if (currentLastDay < 6) {
+    for (let i = 1; i <= (7 - currentLastDay - 1); i++) {
+        calendarDate.innerHTML = calendarDate.innerHTML + `<div class="inactive">` + i + `</div>`;
+    };
+    // };
 };
 
 generateCalendar();
 
+// previous button
 let prev = document.querySelector(".prev-button");
 prev.addEventListener("click", () => {
     date.setMonth(date.getMonth() - 1);
     generateCalendar();
 });
 
+// next button
 let next = document.querySelector(".next-button");
 next.addEventListener("click", () => {
     date.setMonth(date.getMonth() + 1);
