@@ -17,10 +17,13 @@ const generateCalendar = () => {
 
     const calendarDate = document.querySelector(".dates");
     calendarDate.innerHTML = "";
-
-    for (let i = prevLastDate - prevLastDay; i <= prevLastDate; i++) {
-        calendarDate.innerHTML = calendarDate.innerHTML + `<div class="inactive">` + i + `</div>`;
+    // previous month // add if previous month's last day is Sunday - Friday(0-5), don't add if previous month's last day is Saturday(6)
+    if (prevLastDay < 6) {
+        for (let i = prevLastDate - prevLastDay; i <= prevLastDate; i++) {
+            calendarDate.innerHTML = calendarDate.innerHTML + `<div class="inactive">` + i + `</div>`;
+        };
     };
+
     for (let i = 1; i <= currentLastDate; i++) {
         calendarDate.innerHTML = calendarDate.innerHTML + `<div class="active">` + i + `</div>`;
     };
