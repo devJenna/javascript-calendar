@@ -24,7 +24,6 @@ body {
     height: 50vh;
     background-color: white;
     /* border-radius: 10px; */
-    
 }
 .nav {
     display: flex;
@@ -83,8 +82,16 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     height: 100%;
+    /* justify-content: center;
+    align-items: center; */
 }
-
+/* center-align each date in calendar */
+.active, .inactive {
+    /* display: inline-grid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .inactive {
     opacity: 0.5;
 }
