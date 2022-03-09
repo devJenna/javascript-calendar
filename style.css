@@ -20,6 +20,7 @@ body {
     /* background-color: #9FB4F4; */
     background-color: #B2C3F5;
     /* background-color: #BBC9F7; */
+    text-transform: uppercase;
 }
 
 .container {
@@ -47,7 +48,9 @@ body {
     /* color: #f7e46bfd; */
     /* color: #f7e572fd; */
     color: #fce65cfd;
-    font-size: 1rem;
+    /* font-size: 1rem; */
+    /* change font size due to font family change */
+    font-size: 1.25rem;
 }
 .today h2, h5 {
     padding: 0.2rem;
@@ -78,6 +81,8 @@ body {
     align-items: center;
     padding: 1.5rem;
     /* padding: 1.2rem; */
+    /* center align dates in the calendar */
+    justify-content: center;
 }
 .days {
     display: grid;
