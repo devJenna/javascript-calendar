@@ -93,6 +93,9 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     /* height: 40%; */
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 .dates {
     display: grid;
@@ -110,6 +113,10 @@ body {
 }
 .inactive {
     opacity: 0.5;
+}
+
+.todayDate {
+    background-color: #fce65cfd;
 }
 
 /* add media query */
@@ -161,6 +168,4 @@ body {
         margin-right: 0.5rem;
     }
 }
-.todayDate {
-    background-color: #fce65cfd;
-}
+
