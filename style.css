@@ -142,3 +142,6 @@ body {
         padding-right: 0.5rem;
     }
 }
+.todayDate {
+    background-color: #fce65cfd;
+}
