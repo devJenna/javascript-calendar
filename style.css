@@ -41,6 +41,7 @@ body {
     background-color: #000038;
     color: #ffffff;
     /* border-radius: 10px 0 0 10px; */
+    /* align-items: center; */
 }
 .year, .date {
     /* color: #F9DB15; */
@@ -53,7 +54,10 @@ body {
     font-size: 1.25rem;
 }
 .today h2, h5 {
-    padding-bottom: 0.2rem;
+    /* padding-bottom: 0.2rem; */
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+    /* font-size: 4vmin; */
 }
 .nav-button {
     text-align: center;
@@ -109,7 +113,8 @@ body {
 }
 
 /* add media query */
-@media (max-width: 414px) {
+/* @media (max-width: 414px) { */
+    @media (max-width: 597px) {
     .container {
         /* display: flex; */
         flex-direction: column;
