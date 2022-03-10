@@ -64,3 +64,11 @@ next.addEventListener("click", () => {
     generateCalendar();
 });
 
+// add toggle
+const selectedDates = document.querySelectorAll(".dates div");
+selectedDates.forEach(function (selected) {
+    selected.addEventListener("click", function () {
+        selected.classList.toggle("selected");
+    })
+});
+
