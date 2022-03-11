@@ -46,6 +46,14 @@ const generateCalendar = () => {
     for (let i = 1; i <= (7 - currentLastDay - 1); i++) {
         calendarDate.innerHTML = calendarDate.innerHTML + `<div class="inactive">` + i + `</div>`;
     };
+
+    // add toggle
+    const selectedDates = document.querySelectorAll(".dates div");
+    selectedDates.forEach(function (selected) {
+        selected.addEventListener("click", function () {
+            selected.classList.toggle("selected");
+        })
+    });
 };
 
 generateCalendar();
@@ -64,11 +72,11 @@ next.addEventListener("click", () => {
     generateCalendar();
 });
 
-// add toggle
-const selectedDates = document.querySelectorAll(".dates div");
-selectedDates.forEach(function (selected) {
-    selected.addEventListener("click", function () {
-        selected.classList.toggle("selected");
-    })
-});
+// // add toggle
+// const selectedDates = document.querySelectorAll(".dates div");
+// selectedDates.forEach(function (selected) {
+//     selected.addEventListener("click", function () {
+//         selected.classList.toggle("selected");
+//     })
+// });
 
